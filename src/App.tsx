@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react'
 import {
   Alert,
   TouchableOpacity,
@@ -7,30 +7,29 @@ import {
   TextInput,
   View,
   Text,
-} from 'react-native';
+} from 'react-native'
+import {PrimaryButton} from './components/Button'
+import TransactionList from './transactions/TransactionList'
 
 const App = () => {
-  const [searchText, onSearchTextChanged] = useState<string>('');
+  const [searchText, onSearchTextChanged] = useState<string>('')
   return (
     <SafeAreaView style={styles.container}>
-      <View style={styles.searchbar}>
+      <View style={styles.searchBar}>
         <TextInput
-          placeholder=" Cari nama, bank, atau nominal"
+          placeholder="Cari nama, bank, atau nominal"
           placeholderTextColor="#C5C5C5"
           style={styles.search}
           onChangeText={onSearchTextChanged}
           value={searchText}
           inlineImageLeft="search"
         />
-        <TouchableOpacity
-          onPress={() => Alert.alert('Simple Button pressed')}
-          style={styles.button}>
-          <Text style={styles.buttonText}>{'URUTKAN'}</Text>
-        </TouchableOpacity>
+        <PrimaryButton title={'URUTKAN V'} />
       </View>
+      <TransactionList />
     </SafeAreaView>
-  );
-};
+  )
+}
 
 const styles = StyleSheet.create({
   container: {
@@ -43,20 +42,14 @@ const styles = StyleSheet.create({
     fontSize: 18,
     flex: 1,
   },
-  searchbar: {
-    margin: 20,
+  searchBar: {
+    marginTop: 10,
+    marginLeft: 10,
+    marginRight: 10,
     backgroundColor: '#FFFFFF',
     display: 'flex',
     flexDirection: 'row',
   },
-  button: {
-    display: 'flex',
-    flexDirection: 'row',
-  },
-  buttonText: {
-    color: '#FF4500',
-    justifyContent: 'flex-end',
-  },
-});
+})
 
-export default App;
+export default App
