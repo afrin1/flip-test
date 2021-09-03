@@ -1,4 +1,4 @@
-import { Transaction } from "./transactions/types";
+import { Transaction } from "../transactions/types";
 
 export const sortA_Z = (list: Transaction[], key: string): Transaction[] => {
   const newList = [...list]
@@ -39,7 +39,6 @@ export const sortDateOldest = (list: Transaction[]): Transaction[] => {
     return 0;
   })
 }
-
 
 export const isMatchingSearchText = (item: Transaction, searchText: string): boolean => {
   return (item.beneficiaryName.toLowerCase().includes(searchText)

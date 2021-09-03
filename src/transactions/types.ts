@@ -11,3 +11,8 @@ export type Transaction = {
   createdAt: string,
   completedAt: string,
 }
+
+export enum Status {
+  SUCCESS='SUCCESS',
+  PENDING='PENDING'
+}

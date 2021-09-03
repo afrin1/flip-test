@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { View } from 'react-native'
-import { isMatchingSearchText, sortA_Z, sortDateNewest, sortDateOldest, sortZ_A } from '../utils'
+import { isMatchingSearchText, sortA_Z, sortDateNewest, sortDateOldest, sortZ_A } from '../utils/utils'
 import { fetchTransactions } from './repository'
 import SearchBar from './SearchBar'
 import SortMenu, { sortOptions } from './SortMenu'

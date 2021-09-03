@@ -1,0 +1,116 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Transaction Item should match snapshot 1`] = `
+<View
+  style={
+    Object {
+      "flexDirection": "row",
+      "marginTop": 10,
+    }
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "borderBottomLeftRadius": 10,
+          "borderTopLeftRadius": 10,
+          "flex": 0.02,
+        },
+        Object {
+          "backgroundColor": "#00AF33",
+        },
+      ]
+    }
+    testID="sidebar"
+  />
+  <View
+    style={
+      Object {
+        "backgroundColor": "white",
+        "borderBottomRightRadius": 5,
+        "borderTopRightRadius": 5,
+        "flex": 1,
+        "flexDirection": "row",
+        "padding": 10,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "flex": 1,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "fontSize": 20,
+            "fontWeight": "bold",
+          }
+        }
+      >
+        bni -&gt; bca
+      </Text>
+      <Text
+        style={
+          Object {
+            "fontSize": 16,
+            "fontWeight": "bold",
+          }
+        }
+      >
+        Sammy-Jo Mccall
+      </Text>
+      <Text
+        style={
+          Object {
+            "fontSize": 16,
+            "fontWeight": "bold",
+          }
+        }
+      >
+        Rp.2629107 . 2021-09-02 20:49:49
+      </Text>
+    </View>
+    <View
+      accessible={true}
+      collapsable={false}
+      focusable={false}
+      nativeID="animatedComponent"
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "justifyContent": "center",
+          "opacity": 1,
+        }
+      }
+      testID="success-button"
+    >
+      <Text
+        style={
+          Object {
+            "backgroundColor": "#00AF33",
+            "borderRadius": 10,
+            "color": "#FFFFFF",
+            "fontSize": 14,
+            "fontWeight": "bold",
+            "margin": 5,
+            "padding": 10,
+            "textAlignVertical": "center",
+          }
+        }
+      >
+        Berhasil
+      </Text>
+    </View>
+  </View>
+</View>
+`;

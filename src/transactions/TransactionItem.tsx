@@ -2,7 +2,8 @@ import React from 'react'
 import { View, Text, StyleSheet } from 'react-native'
 import { SuccessButton, PendingButton } from '../components/Button'
 import { colors } from '../theme/colors'
-import { Transaction } from './types'
+import testID from '../utils/testID'
+import { Status, Transaction } from './types'
 
 interface TransactionItemProps {
   item: Transaction
@@ -15,10 +16,10 @@ const TransactionItem = (props: TransactionItemProps) => {
     amount,
     createdAt,
     status } = props.item
-  const buttonText: string = status === "SUCCESS" ? 'Berhasil' : 'Pengecekan'
+  const buttonText: string = status === Status.SUCCESS ? 'Berhasil' : 'Pengecekan'
   return (
     <View style={styles.container}>
-      <View style={status === "SUCCESS"
+      <View {...testID('sidebar')} style={status === Status.SUCCESS
         ? [styles.sideBar, styles.sideBarSuccess]
         : [styles.sideBar, styles.sideBarPending]}></View>
       <View style={styles.item}>
@@ -27,7 +28,7 @@ const TransactionItem = (props: TransactionItemProps) => {
           <Text style={styles.otherInfo}>{beneficiaryName}</Text>
           <Text style={styles.otherInfo}>{`Rp.${amount} . ${createdAt}`}</Text>
         </View>
-        {status === "SUCCESS"
+        {status === Status.SUCCESS
           ? <SuccessButton title={buttonText} />
           : <PendingButton title={buttonText} />}
       </View>

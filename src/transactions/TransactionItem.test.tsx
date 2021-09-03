@@ -1,11 +1,11 @@
-import 'react-native';
-import React from 'react';
+import { render } from '@testing-library/react-native'
+import React from 'react'
+import 'react-native'
+import { colors } from '../theme'
+import TransactionItem from './TransactionItem'
+import { Status } from './types'
 
-// Note: test renderer must be required after react-native.
-import renderer from 'react-test-renderer';
-import TransactionItem from './TransactionItem';
-
-it('renders correctly', () => {
+describe('Transaction Item', () => {
   const item = {
     id: "FT2366",
     amount: 2629107,
@@ -19,10 +19,35 @@ it('renders correctly', () => {
     createdAt: "2021-09-02 20:49:49",
     completedAt: "2021-09-02 20:49:49",
   }
-  renderer.create(<TransactionItem item={item} />);
-});
+  it('should match snapshot', () => {
+    expect(render(<TransactionItem item={item} />)).toMatchSnapshot()
+  })
 
-//green color box
-//orange box
-//success button - testID
-//pending button - testId
+  it('should display green color box when the status="SUCCESS"', () => {
+    const { getByTestId } = render(<TransactionItem item={item} />)
+    expect(getByTestId('sidebar')).not.toBeNull()
+    expect(getByTestId('sidebar')).toHaveStyle({ backgroundColor: colors.SUCCESS })
+  })
+
+  it('should display orange color box when the status="PENDING"', () => {
+    const { getByTestId } = render(
+      <TransactionItem item={{ ...item, status: Status.PENDING }} />
+    )
+    expect(getByTestId('sidebar')).not.toBeNull()
+    expect(getByTestId('sidebar')).toHaveStyle({ backgroundColor: colors.PENDING })
+  })
+
+  it('should display success button when the status="SUCCESS"', () => {
+    const { getByTestId, queryByTestId } = render(<TransactionItem item={item} />)
+    expect(getByTestId('success-button')).not.toBeNull()
+    expect(queryByTestId('pending-button')).toBeNull()
+  })
+
+  it('should display pending button when the status="PENDING"', () => {
+    const { getByTestId, queryByTestId } = render(
+      <TransactionItem item={{ ...item, status: Status.PENDING }} />
+    )
+    expect(getByTestId('pending-button')).not.toBeNull()
+    expect(queryByTestId('success-button')).toBeNull()
+  })
+})
