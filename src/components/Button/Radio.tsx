@@ -9,14 +9,15 @@ export type RadioItem = {
 interface RadioButtonProps {
   items: RadioItem[],
   defaultValue: string,
-  onSelection: any
+  onSelection: any,
+  [x: string]: any
 }
 
 const RadioButton = (props: RadioButtonProps) => {
   const { items, defaultValue, onSelection } = props
   const [value, setValue] = useState<string>(defaultValue)
   return (
-    <View>
+    <View {...props}>
       {items.map(item => {
         return (
           <Pressable

@@ -5,5 +5,5 @@ export { default as RadioButton } from './Radio'
 export interface ButtonProps {
   title: string,
   onPress: any,
-  [x:string]: any;
+  [x: string]: any;
 }

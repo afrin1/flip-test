@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Modal, Pressable, StyleSheet, View } from 'react-native';
 import { RadioButton } from '../components/Button';
 import { RadioItem } from '../components/Button/Radio';
+import testID from '../utils/testID';
 
 interface SortMenuProps {
   setMenuClose: any,
@@ -64,6 +65,7 @@ const SortMenu = (props: SortMenuProps) => {
         onPress={onClose}>
         <View style={styles.centeredView}>
           <RadioButton
+            {...testID('sort-radio-buttons')}
             items={menuItems}
             defaultValue={selectedOption}
             onSelection={onOptionSelection} />
