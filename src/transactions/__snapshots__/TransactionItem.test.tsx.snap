@@ -8,6 +8,7 @@ exports[`Transaction Item should match snapshot 1`] = `
       "marginTop": 10,
     }
   }
+  testID="transaction-item"
 >
   <View
     style={

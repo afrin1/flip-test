@@ -18,7 +18,9 @@ const TransactionItem = (props: TransactionItemProps) => {
     status } = props.item
   const buttonText: string = status === Status.SUCCESS ? 'Berhasil' : 'Pengecekan'
   return (
-    <View style={styles.container}>
+    <View
+      {...testID('transaction-item')}
+      style={styles.container}>
       <View {...testID('sidebar')} style={status === Status.SUCCESS
         ? [styles.sideBar, styles.sideBarSuccess]
         : [styles.sideBar, styles.sideBarPending]}></View>
