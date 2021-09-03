@@ -73,7 +73,7 @@ const Transactions = () => {
   }
 
   return (
-    <View>
+    <View style={{flex: 1}}>
       {isSortMenuOpened ?
         <SortMenu
           setMenuClose={onSortMenuClose}

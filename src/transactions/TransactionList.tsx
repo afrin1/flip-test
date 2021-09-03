@@ -1,20 +1,21 @@
-import axios from 'axios'
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { FlatList, StyleSheet } from 'react-native'
-import { Transaction } from './types'
 import TransactionItem from './TransactionItem'
+import { Transaction } from './types'
 
-const TransactionList = ({data}: {data: Transaction[]}) => {
+const TransactionList = ({ data }: { data: Transaction[] }) => {
   const renderItem = ({ item }: { item: Transaction }) => (
     <TransactionItem item={item} />
   )
 
-  return (<FlatList
-    style={styles.list}
-    data={data}
-    renderItem={renderItem}
-    keyExtractor={item => item.id}
-  />)
+  return (
+      <FlatList
+        style={styles.list}
+        data={data}
+        renderItem={renderItem}
+        keyExtractor={item => item.id}
+        contentContainerStyle={{ paddingBottom: 20 }}
+      />)
 }
 
 const styles = StyleSheet.create({

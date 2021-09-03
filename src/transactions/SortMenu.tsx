@@ -36,6 +36,11 @@ const SortMenu = (props: SortMenuProps) => {
   const { setMenuClose, onOptionSelection, selectedOption } = props
   const [isOpen, setIsOpen] = useState<boolean>(true)
 
+  const onClose = () => {
+    setIsOpen(false)
+    setMenuClose()
+  }
+
   useEffect(() => {
     setIsOpen(true)
   }, [])
@@ -44,28 +49,18 @@ const SortMenu = (props: SortMenuProps) => {
       animationType="slide"
       visible={isOpen}
       transparent={true}
-      onRequestClose={() => {
-        setIsOpen(false)
-        setMenuClose()
-      }}
+      onRequestClose={onClose}
     >
-      <View style={styles.container}>
+      <Pressable
+        style={styles.container}
+        onPress={onClose}>
         <View style={styles.centeredView}>
           <RadioButton
             items={menuItems}
             defaultValue={selectedOption}
             onSelection={onOptionSelection} />
-          <Pressable
-            style={[styles.button, styles.buttonClose]}
-            onPress={() => {
-              setIsOpen(false)
-              setMenuClose()
-            }}
-          >
-            <Text style={styles.textStyle}>Hide Modal</Text>
-          </Pressable>
         </View>
-      </View>
+      </Pressable>
     </Modal>
   )
 }

@@ -19,24 +19,20 @@ const RadioButton = (props: RadioButtonProps) => {
     <View>
       {items.map(item => {
         return (
-          <View key={item.key} style={styles.container}>
-            <Pressable
-              onPress={() => {
-                setValue(item.key)
-                onSelection(item.key)
-              }}>
-              <View style={styles.radioContainer}>
-                <View style={styles.radioCircle}> 
+          <Pressable
+            key={item.key} style={styles.container}
+            onPress={() => {
+              setValue(item.key)
+              onSelection(item.key)
+            }}>
+            <View style={styles.radioContainer}>
+              <View style={styles.radioCircle}>
                 {value === item.key && <View style={styles.selectedRb} />}</View>
-                <Text style={styles.radioText}>{item.text}</Text>
-              </View>
-              
-
-            </Pressable>
-          </View>
+              <Text style={styles.radioText}>{item.text}</Text>
+            </View>
+          </Pressable>
         );
       })}
-      <Text> Selected: {value} </Text>
     </View>
   )
 }
