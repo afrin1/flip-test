@@ -1,12 +1,14 @@
 import React from "react";
-import { Alert, StyleSheet, Text, TouchableOpacity } from "react-native";
+import { StyleSheet, Text, TouchableOpacity } from "react-native";
+import { ButtonProps } from ".";
 import { colors } from "../../theme/colors";
 import { buttonText } from "../../theme/typography";
 
-const SuccessButton = ({ title }: { title: string }) => {
+const SuccessButton = (props: ButtonProps) => {
+  const { title, onPress } = props
   return (
     <TouchableOpacity
-      onPress={() => Alert.alert('Simple Button pressed')}
+      onPress={onPress}
       style={styles.button}>
       <Text style={styles.text}>{title}</Text>
     </TouchableOpacity>

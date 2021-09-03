@@ -1,32 +1,15 @@
-import React, { useState } from 'react'
+import React from 'react'
 import {
-  Alert,
-  TouchableOpacity,
   SafeAreaView,
-  StyleSheet,
-  TextInput,
-  View,
-  Text,
+  StyleSheet
 } from 'react-native'
-import {PrimaryButton} from './components/Button'
-import TransactionList from './transactions/TransactionList'
+import Transactions from './transactions/Transactions'
 
 const App = () => {
-  const [searchText, onSearchTextChanged] = useState<string>('')
+
   return (
     <SafeAreaView style={styles.container}>
-      <View style={styles.searchBar}>
-        <TextInput
-          placeholder="Cari nama, bank, atau nominal"
-          placeholderTextColor="#C5C5C5"
-          style={styles.search}
-          onChangeText={onSearchTextChanged}
-          value={searchText}
-          inlineImageLeft="search"
-        />
-        <PrimaryButton title={'URUTKAN V'} />
-      </View>
-      <TransactionList />
+      <Transactions />
     </SafeAreaView>
   )
 }
@@ -36,20 +19,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#C5C5C5',
     display: 'flex',
     flex: 1,
-  },
-  search: {
-    color: 'black',
-    fontSize: 18,
-    flex: 1,
-  },
-  searchBar: {
-    marginTop: 10,
-    marginLeft: 10,
-    marginRight: 10,
-    backgroundColor: '#FFFFFF',
-    display: 'flex',
-    flexDirection: 'row',
-  },
+  }
 })
 
 export default App

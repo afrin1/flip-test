@@ -1,12 +1,14 @@
 import React from "react";
 import { Alert, StyleSheet, Text, TouchableOpacity } from "react-native";
+import { ButtonProps } from ".";
 import { colors } from "../../theme/colors";
 import { buttonText } from "../../theme/typography";
 
-const PendingButton = ({ title }: { title: string }) => {
+const PendingButton = (props: ButtonProps) => {
+  const { title, onPress } = props
   return (
     <TouchableOpacity
-      onPress={() => Alert.alert('Simple Button pressed')}
+      onPress={onPress}
       style={styles.button}>
       <Text style={styles.buttonText}>{title}</Text>
     </TouchableOpacity>
