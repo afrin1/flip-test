@@ -42,10 +42,10 @@ const Transactions = () => {
         setData(fullData)
         break;
       case sortOptions.Nama_A_Z:
-        setData(sortA_Z(fullData))
+        setData(sortA_Z(fullData, 'beneficiaryName'))
         break;
       case sortOptions.Nama_Z_A:
-        setData(sortZ_A(fullData))
+        setData(sortZ_A(fullData, 'beneficiaryName'))
         break;
       case sortOptions.Tanggal_Terbaru:
         setData(sortDateNewest(fullData))

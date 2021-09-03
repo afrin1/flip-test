@@ -1,19 +1,19 @@
 import { Transaction } from "./transactions/types";
 
-export const sortA_Z = (list: Transaction[]): Transaction[] => {
+export const sortA_Z = (list: Transaction[], key: string): Transaction[] => {
   const newList = [...list]
-  return newList.sort((a, b) => {
-    if (a.beneficiaryName > b.beneficiaryName) return 1;
-    if (a.beneficiaryName < b.beneficiaryName) return -1;
+  return newList.sort((a: Transaction, b: Transaction) => {
+    if (a[key] > b[key]) return 1;
+    if (a[key] < b[key]) return -1;
     return 0;
   })
 }
 
-export const sortZ_A = (list: Transaction[]): Transaction[] => {
+export const sortZ_A = (list: Transaction[], key: string): Transaction[] => {
   const newList = [...list]
   return newList.sort((a, b) => {
-    if (a.beneficiaryName < b.beneficiaryName) return 1;
-    if (a.beneficiaryName > b.beneficiaryName) return -1;
+    if (a[key] < b[key]) return 1;
+    if (a[key] > b[key]) return -1;
     return 0;
   })
 }
