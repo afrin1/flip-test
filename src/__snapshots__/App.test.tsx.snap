@@ -41,6 +41,7 @@ exports[`App should match snapshot 1`] = `
             "fontSize": 18,
           }
         }
+        testID="search-input"
         value=""
       />
       <View
@@ -61,6 +62,7 @@ exports[`App should match snapshot 1`] = `
             "opacity": 1,
           }
         }
+        testID="sort-button"
       >
         <Text
           style={

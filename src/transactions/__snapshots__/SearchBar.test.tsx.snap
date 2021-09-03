@@ -1,0 +1,66 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Search Bar should match snapshot 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#FFFFFF",
+      "borderRadius": 5,
+      "flexDirection": "row",
+      "marginLeft": 10,
+      "marginRight": 10,
+      "marginTop": 10,
+    }
+  }
+>
+  <TextInput
+    inlineImageLeft="search"
+    onChangeText={[MockFunction]}
+    placeholder="Cari nama, bank, atau nominal"
+    placeholderTextColor="#C5C5C5"
+    style={
+      Object {
+        "color": "black",
+        "flex": 1,
+        "fontSize": 18,
+      }
+    }
+    testID="search-input"
+    value="Sample text"
+  />
+  <View
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    nativeID="animatedComponent"
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "justifyContent": "center",
+        "opacity": 1,
+      }
+    }
+    testID="sort-button"
+  >
+    <Text
+      style={
+        Object {
+          "color": "#FF6347",
+          "fontSize": 14,
+          "fontWeight": "bold",
+          "margin": 10,
+          "textAlignVertical": "center",
+        }
+      }
+    >
+      URUTKAN V
+    </Text>
+  </View>
+</View>
+`;

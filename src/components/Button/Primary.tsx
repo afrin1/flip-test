@@ -8,6 +8,7 @@ const PrimaryButton = (props: ButtonProps) => {
   const { title, onPress} = props
   return (
     <TouchableOpacity
+      {... props}
       onPress={onPress}
       style={styles.button}>
       <Text style={styles.buttonText}>{title}</Text>

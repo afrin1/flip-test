@@ -9,7 +9,8 @@ const PendingButton = (props: ButtonProps) => {
   const { title, onPress } = props
   return (
     <TouchableOpacity
-    {...testID('pending-button')}
+      {...props}
+      {...testID('pending-button')}
       onPress={onPress}
       style={styles.button}>
       <Text style={styles.buttonText}>{title}</Text>

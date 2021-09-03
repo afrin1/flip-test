@@ -9,6 +9,7 @@ const SuccessButton = (props: ButtonProps) => {
   const { title, onPress } = props
   return (
     <TouchableOpacity
+      {...props}
       {...testID('success-button')}
       onPress={onPress}
       style={styles.button}>

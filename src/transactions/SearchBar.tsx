@@ -2,6 +2,7 @@ import React from "react"
 import { StyleSheet, TextInput, View } from "react-native"
 import { PrimaryButton } from "../components/Button"
 import { colors } from "../theme"
+import testID from "../utils/testID"
 
 interface SearchBarProps {
   onTextChanged: any,
@@ -15,6 +16,7 @@ const SearchBar = (props: SearchBarProps) => {
   return (
     <View style={styles.searchBar}>
       <TextInput
+        {...testID('search-input')}
         placeholder="Cari nama, bank, atau nominal"
         placeholderTextColor={colors.GRAY}
         style={styles.search}
@@ -22,7 +24,10 @@ const SearchBar = (props: SearchBarProps) => {
         value={text}
         inlineImageLeft="search"
       />
-      <PrimaryButton title={'URUTKAN V'} onPress={onButtonPressed} />
+      <PrimaryButton
+        {...testID('sort-button')}
+        title={'URUTKAN V'}
+        onPress={onButtonPressed} />
     </View>
   )
 }

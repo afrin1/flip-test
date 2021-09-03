@@ -4,5 +4,6 @@ export { default as PendingButton } from './Pending'
 export { default as RadioButton } from './Radio'
 export interface ButtonProps {
   title: string,
-  onPress: any
+  onPress: any,
+  [x:string]: any;
 }
