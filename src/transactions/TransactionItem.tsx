@@ -4,13 +4,17 @@ import { SuccessButton, PendingButton } from '../components/Button'
 import { colors } from '../theme/colors'
 import { Transaction } from './types'
 
-const TransactionItem = ({ item }: { item: Transaction }) => {
+interface TransactionItemProps {
+  item: Transaction
+}
+
+const TransactionItem = (props: TransactionItemProps) => {
   const { beneficiaryName,
     senderBank,
     beneficiaryBank,
     amount,
     createdAt,
-    status } = item
+    status } = props.item
   const buttonText: string = status === "SUCCESS" ? 'Berhasil' : 'Pengecekan'
   return (
     <View style={styles.container}>

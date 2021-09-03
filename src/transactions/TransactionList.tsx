@@ -3,19 +3,24 @@ import { FlatList, StyleSheet } from 'react-native'
 import TransactionItem from './TransactionItem'
 import { Transaction } from './types'
 
-const TransactionList = ({ data }: { data: Transaction[] }) => {
+interface TransactionListProps {
+  data: Transaction[]
+}
+
+const TransactionList = (props: TransactionListProps) => {
+  const { data } = props
   const renderItem = ({ item }: { item: Transaction }) => (
     <TransactionItem item={item} />
   )
 
   return (
-      <FlatList
-        style={styles.list}
-        data={data}
-        renderItem={renderItem}
-        keyExtractor={item => item.id}
-        contentContainerStyle={{ paddingBottom: 20 }}
-      />)
+    <FlatList
+      style={styles.list}
+      data={data}
+      renderItem={renderItem}
+      keyExtractor={item => item.id}
+      contentContainerStyle={{ paddingBottom: 20 }}
+    />)
 }
 
 const styles = StyleSheet.create({
