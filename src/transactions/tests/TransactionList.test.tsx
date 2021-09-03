@@ -1,8 +1,8 @@
 import { render } from '@testing-library/react-native';
 import React from 'react';
 import 'react-native';
-import TransactionList from './TransactionList';
-import { Transaction } from './types';
+import TransactionList from '../TransactionList';
+import { Transaction } from '../types';
 
 describe('Transaction List', () => {
   const data: Transaction[] = [{

@@ -1,6 +1,6 @@
 import { render } from '@testing-library/react-native'
 import React from 'react'
-import SortMenu, { sortOptions } from './SortMenu'
+import SortMenu, { sortOptions } from '../SortMenu'
 
 describe('SortMenu', () => {
   const setMenuCloseMock = jest.fn()

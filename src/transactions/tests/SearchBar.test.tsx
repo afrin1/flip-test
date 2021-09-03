@@ -1,6 +1,6 @@
 import React from 'react'
 import { fireEvent, render } from '@testing-library/react-native'
-import SearchBar from './SearchBar'
+import SearchBar from '../SearchBar'
 
 describe('Search Bar', () => {
 

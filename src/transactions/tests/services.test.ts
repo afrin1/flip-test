@@ -1,6 +1,6 @@
 import { waitFor } from '@testing-library/react-native';
 import axios from 'axios';
-import { fetchTransactions, TRANSACTIONS_API } from './services'
+import { fetchTransactions, TRANSACTIONS_API } from '../services'
 
 describe('Repository', () => {
   it('should call axios.get with a valid url', () => {
