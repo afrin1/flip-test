@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Modal, Pressable, StyleSheet, Text, View } from 'react-native';
+import { Modal, Pressable, StyleSheet, View } from 'react-native';
 import { RadioButton } from '../components/Button';
 import { RadioItem } from '../components/Button/Radio';
 
@@ -9,26 +9,34 @@ interface SortMenuProps {
   selectedOption: string
 }
 
+export enum sortOptions {
+  URUTKAN = 'URUTKAN',
+  Nama_A_Z = 'Nama A-Z',
+  Nama_Z_A = 'Nama Z-A',
+  Tanggal_Terbaru = 'Tanggal Terbaru',
+  Tanggal_Terlama = 'Tanggal Terlama'
+}
+
 const menuItems: RadioItem[] = [
   {
-    key: 'URUTKAN',
-    text: 'URUTKAN'
+    key: sortOptions.URUTKAN,
+    text: sortOptions.URUTKAN
   },
   {
-    key: 'Nama A-Z',
-    text: 'Nama A-Z'
+    key: sortOptions.Nama_A_Z,
+    text: sortOptions.Nama_A_Z
   },
   {
-    key: 'Nama Z-A',
-    text: 'Nama Z-A'
+    key: sortOptions.Nama_Z_A,
+    text: sortOptions.Nama_Z_A
   },
   {
-    key: 'Tanggal Terbaru',
-    text: 'Tanggal Terbaru'
+    key: sortOptions.Tanggal_Terbaru,
+    text: sortOptions.Tanggal_Terbaru
   },
   {
-    key: 'Tanggal Terlama',
-    text: 'Tanggal Terlama'
+    key: sortOptions.Tanggal_Terlama,
+    text: sortOptions.Tanggal_Terlama
   },
 ]
 

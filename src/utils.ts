@@ -55,7 +55,7 @@ const MONTH: string[] = [
   "September", "October",
   "November", "December"
 ]
-export const getDate = (time: string) => {
+export const getDate_DD_MONTH_YYYY = (time: string) => {
   const date = new Date(time.split(' ')[0])
   const day = date.getDate()
   const month = MONTH[date.getMonth()]

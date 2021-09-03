@@ -3,6 +3,7 @@ import {
   SafeAreaView,
   StyleSheet
 } from 'react-native'
+import { colors } from './theme'
 import Transactions from './transactions/Transactions'
 
 const App = () => {
@@ -16,7 +17,7 @@ const App = () => {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: '#C5C5C5',
+    backgroundColor: colors.GRAY,
     display: 'flex',
     flex: 1,
   }

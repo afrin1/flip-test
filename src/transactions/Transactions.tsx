@@ -1,13 +1,12 @@
-import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { StyleSheet, TextInput, View } from 'react-native'
 import { PrimaryButton } from '../components/Button'
-import { getDate as getDate_DD_MONTH_YYYY, isMatchingSearchText, sortA_Z, sortDateNewest, sortDateOldest, sortZ_A } from '../utils'
-import SortMenu from './SortMenu'
+import { colors } from '../theme'
+import { isMatchingSearchText, sortA_Z, sortDateNewest, sortDateOldest, sortZ_A } from '../utils'
+import { fetchTransactions } from './repository'
+import SortMenu, { sortOptions } from './SortMenu'
 import TransactionList from './TransactionList'
 import { Transaction } from './types'
-
-const TRANSACTIONS_API = 'https://nextar.flip.id/frontend-test'
 
 const Transactions = () => {
   const [searchText, onSearchTextChanged] = useState<string>('')
@@ -40,19 +39,19 @@ const Transactions = () => {
 
   const sortList = () => {
     switch (sortOption) {
-      case 'URUTKAN':
+      case sortOptions.URUTKAN:
         setData(fullData)
         break;
-      case 'Nama A-Z':
+      case sortOptions.Nama_A_Z:
         setData(sortA_Z(fullData))
         break;
-      case 'Nama Z-A':
+      case sortOptions.Nama_Z_A:
         setData(sortZ_A(fullData))
         break;
-      case 'Tanggal Terbaru':
+      case sortOptions.Tanggal_Terbaru:
         setData(sortDateNewest(fullData))
         break;
-      case 'Tanggal Terlama':
+      case sortOptions.Tanggal_Terlama:
         setData(sortDateOldest(fullData))
         break;
       default:
@@ -62,12 +61,10 @@ const Transactions = () => {
   }
 
   const onSortMenuOpen = () => {
-    console.log('onSortMenuOpen')
     setIsSortMenuOpened(true)
   }
 
   const onSortMenuClose = () => {
-    console.log('onSortMenuClose : ', sortOption)
     setIsSortMenuOpened(false)
     sortList()
   }
@@ -84,7 +81,7 @@ const Transactions = () => {
       <View style={styles.searchBar}>
         <TextInput
           placeholder="Cari nama, bank, atau nominal"
-          placeholderTextColor="#C5C5C5"
+          placeholderTextColor={colors.GRAY}
           style={styles.search}
           onChangeText={onSearch}
           value={searchText}
@@ -95,42 +92,6 @@ const Transactions = () => {
       <TransactionList data={data} />
     </View>
   )
-}
-
-const fetchTransactions = async (): Promise<Transaction[]> => {
-  var list: Transaction[] = []
-  await axios.get(TRANSACTIONS_API)
-    .then((response) => {
-      list = getTransactionListFromResponse(response.data)
-    })
-    .catch((error) => {
-      console.error(`Fetch failed: ${error}`)
-    })
-  return list
-}
-
-const getTransactionListFromResponse = (transactions: any): Transaction[] => {
-  const list: Transaction[] = []
-
-  Object.keys(transactions).map((item: any) => {
-    const perTransaction = transactions[item]
-    const transaction: Transaction = {
-      id: perTransaction.id,
-      amount: perTransaction.amount,
-      uniqueCode: perTransaction.unique_code,
-      status: perTransaction.status,
-      senderBank: perTransaction.sender_bank,
-      accountNumber: perTransaction.account_number,
-      beneficiaryName: perTransaction.beneficiary_name,
-      beneficiaryBank: perTransaction.beneficiary_bank,
-      remark: perTransaction.remark,
-      createdAt: getDate_DD_MONTH_YYYY(perTransaction.created_at),
-      completedAt: perTransaction.completed_at,
-    }
-    list.push(transaction)
-  })
-
-  return list
 }
 
 const styles = StyleSheet.create({
