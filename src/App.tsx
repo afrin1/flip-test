@@ -7,7 +7,6 @@ import { colors } from './theme'
 import Transactions from './transactions/Transactions'
 
 const App = () => {
-
   return (
     <SafeAreaView style={styles.container}>
       <Transactions />
@@ -18,7 +17,6 @@ const App = () => {
 const styles = StyleSheet.create({
   container: {
     backgroundColor: colors.GRAY,
-    display: 'flex',
     flex: 1,
   }
 })

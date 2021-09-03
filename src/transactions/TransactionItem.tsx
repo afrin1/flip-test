@@ -38,7 +38,6 @@ const TransactionItem = (props: TransactionItemProps) => {
 const styles = StyleSheet.create({
   container: {
     marginTop: 10,
-    display: 'flex',
     flexDirection: 'row'
   },
   sideBar: {
@@ -56,8 +55,10 @@ const styles = StyleSheet.create({
     flex: 1,
     padding: 10,
     backgroundColor: 'white',
-    display: 'flex',
-    flexDirection: 'row'
+    flexDirection: 'row',
+    borderTopRightRadius: 5,
+    borderBottomRightRadius: 5,
+
   },
   bankName: {
     fontWeight: 'bold',
