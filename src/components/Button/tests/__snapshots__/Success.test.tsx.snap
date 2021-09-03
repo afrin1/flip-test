@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Success Button should match snapshot 1`] = `
+<View
+  accessible={true}
+  collapsable={false}
+  focusable={true}
+  nativeID="animatedComponent"
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "justifyContent": "center",
+      "opacity": 1,
+    }
+  }
+  testID="success-button"
+>
+  <Text
+    style={
+      Object {
+        "backgroundColor": "#00AF33",
+        "borderRadius": 10,
+        "color": "#FFFFFF",
+        "fontSize": 14,
+        "fontWeight": "bold",
+        "margin": 5,
+        "padding": 10,
+        "textAlignVertical": "center",
+      }
+    }
+  >
+    title
+  </Text>
+</View>
+`;

@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pending Button should match snapshot 1`] = `
+<View
+  accessible={true}
+  collapsable={false}
+  focusable={true}
+  nativeID="animatedComponent"
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "justifyContent": "center",
+      "opacity": 1,
+    }
+  }
+  testID="pending-button"
+>
+  <Text
+    style={
+      Object {
+        "backgroundColor": "#FFFFFF",
+        "borderColor": "#FF6347",
+        "borderRadius": 10,
+        "borderWidth": 2,
+        "color": "#000000",
+        "fontSize": 14,
+        "fontWeight": "bold",
+        "margin": 5,
+        "padding": 10,
+        "textAlignVertical": "center",
+      }
+    }
+  >
+    title
+  </Text>
+</View>
+`;
