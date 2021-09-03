@@ -17,14 +17,14 @@ const SuccessButton = (props: ButtonProps) => {
 
 const styles = StyleSheet.create({
   button: {
-    display: 'flex',
-    flexDirection: 'row',
-    backgroundColor: colors.SUCCESS,
-    borderRadius: 10,
-    padding: 10
+    justifyContent: 'center',
   },
   text: {
     color: '#FFFFFF',
+    backgroundColor: colors.SUCCESS,
+    borderRadius: 10,
+    padding: 10,
+    margin: 5,
     ...buttonText as any
   },
 })

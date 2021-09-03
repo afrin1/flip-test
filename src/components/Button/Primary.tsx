@@ -17,12 +17,11 @@ const PrimaryButton = (props: ButtonProps) => {
 
 const styles = StyleSheet.create({
   button: {
-    display: 'flex',
-    flexDirection: 'row',
-    padding: 8
+    justifyContent: 'center',
   },
   buttonText: {
     color: colors.PENDING,
+    margin: 10,
     ...buttonText as any
   },
 })

@@ -12,7 +12,7 @@ const Transactions = () => {
   const [data, setData] = useState<Transaction[]>([]);
   const [fullData, setFullData] = useState<Transaction[]>([])
   const [isSortMenuOpened, setIsSortMenuOpened] = useState(false);
-  const [sortOption, setSortOption] = useState<string>('URUTKAN');
+  const [sortOption, setSortOption] = useState<string>(sortOptions.URUTKAN);
 
   useEffect(() => {
     const getTransactions = async () => {
