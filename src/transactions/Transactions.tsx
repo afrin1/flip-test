@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { View } from 'react-native'
-import { isMatchingSearchText, sortA_Z, sortDateNewest, sortDateOldest, sortZ_A } from '../utils/utils'
+import { isMatchingSearchText } from '../utils/utils'
+import { sortA_Z, sortDateNewest, sortDateOldest, sortZ_A } from '../utils/sort'
 import { fetchTransactions } from './services'
 import SearchBar from './SearchBar'
 import SortMenu, { sortOptions } from './SortMenu'
@@ -78,9 +79,9 @@ const Transactions = () => {
         />
         : null}
       <SearchBar
-      text={searchText} 
-      onTextChanged={onSearch} 
-      onButtonPressed={onSortMenuOpen} />
+        text={searchText}
+        onTextChanged={onSearch}
+        onButtonPressed={onSortMenuOpen} />
       <TransactionList data={data} />
     </View>
   )

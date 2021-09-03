@@ -1,7 +1,7 @@
 import { Transaction } from "../../transactions/types"
-import { getDate_DD_MONTH_YYYY, sortA_Z, sortDateNewest, sortDateOldest, sortZ_A } from "../utils"
+import { sortA_Z, sortDateNewest, sortDateOldest, sortZ_A } from "../sort"
 
-describe('Util functions', () => {
+describe('Sort utils', () => {
   it('should return a sorted list A-Z', () => {
     const list: Transaction[] = [{
       id: "FT2366",
@@ -240,10 +240,5 @@ describe('Util functions', () => {
     const newList = sortDateOldest(list)
 
     expect(newList).toEqual(expectedList)
-  })
-
-  it('should return the date in the dd Month yyyy format', () => {
-    const result = getDate_DD_MONTH_YYYY('2021-08-29 20:49:49')
-    expect(result).toEqual('29 August 2021')
   })
 })

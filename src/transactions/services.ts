@@ -1,5 +1,5 @@
 import axios from "axios"
-import { getDate_DD_MONTH_YYYY } from "../utils/utils"
+import { getDate_DD_MONTH_YYYY } from "../utils/date"
 import { Transaction } from "./types"
 
 export const TRANSACTIONS_API = 'https://nextar.flip.id/frontend-test'
