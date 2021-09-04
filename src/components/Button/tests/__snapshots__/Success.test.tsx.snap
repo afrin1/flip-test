@@ -27,7 +27,7 @@ exports[`Success Button should match snapshot 1`] = `
         "backgroundColor": "#00AF33",
         "borderRadius": 10,
         "color": "#FFFFFF",
-        "fontSize": 16,
+        "fontSize": 15,
         "fontWeight": "bold",
         "margin": 5,
         "padding": 10,

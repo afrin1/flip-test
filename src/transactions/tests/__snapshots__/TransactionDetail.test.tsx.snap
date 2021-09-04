@@ -76,7 +76,7 @@ exports[`Transaction Detail should match snapshot 1`] = `
           style={
             Object {
               "color": "#FF6347",
-              "fontSize": 16,
+              "fontSize": 15,
               "fontWeight": "bold",
               "margin": 10,
               "textAlignVertical": "center",
