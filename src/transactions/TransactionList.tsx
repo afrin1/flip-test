@@ -4,13 +4,14 @@ import TransactionItem from './TransactionItem'
 import { Transaction } from './types'
 
 interface TransactionListProps {
-  data: Transaction[]
+  data: Transaction[],
+  navigation: any
 }
 
 const TransactionList = (props: TransactionListProps) => {
-  const { data } = props
+  const { data, navigation } = props
   const renderItem = ({ item }: { item: Transaction }) => (
-    <TransactionItem item={item} />
+    <TransactionItem item={item} navigation={navigation}/>
   )
 
   return (

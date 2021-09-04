@@ -19,7 +19,6 @@ exports[`Pending Button should match snapshot 1`] = `
       "opacity": 1,
     }
   }
-  testID="pending-button"
 >
   <Text
     style={
@@ -29,7 +28,7 @@ exports[`Pending Button should match snapshot 1`] = `
         "borderRadius": 10,
         "borderWidth": 2,
         "color": "#000000",
-        "fontSize": 14,
+        "fontSize": 16,
         "fontWeight": "bold",
         "margin": 5,
         "padding": 10,

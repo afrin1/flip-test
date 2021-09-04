@@ -78,7 +78,7 @@ exports[`Transaction Item should match snapshot 1`] = `
     <View
       accessible={true}
       collapsable={false}
-      focusable={false}
+      focusable={true}
       nativeID="animatedComponent"
       onClick={[Function]}
       onResponderGrant={[Function]}
@@ -101,7 +101,7 @@ exports[`Transaction Item should match snapshot 1`] = `
             "backgroundColor": "#00AF33",
             "borderRadius": 10,
             "color": "#FFFFFF",
-            "fontSize": 14,
+            "fontSize": 16,
             "fontWeight": "bold",
             "margin": 5,
             "padding": 10,

@@ -19,7 +19,6 @@ exports[`Success Button should match snapshot 1`] = `
       "opacity": 1,
     }
   }
-  testID="success-button"
 >
   <Text
     style={
@@ -27,7 +26,7 @@ exports[`Success Button should match snapshot 1`] = `
         "backgroundColor": "#00AF33",
         "borderRadius": 10,
         "color": "#FFFFFF",
-        "fontSize": 14,
+        "fontSize": 16,
         "fontWeight": "bold",
         "margin": 5,
         "padding": 10,

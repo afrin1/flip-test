@@ -6,22 +6,26 @@ import Pending from '../Pending'
 describe('Pending Button', () => {
   it('should match snapshot', () => {
     expect(render(
-      <Pending title={'title'} onPress={jest.fn()} />)
+      <Pending
+        title={'title'}
+        onPress={jest.fn()} />)
     ).toMatchSnapshot()
   })
 
   it('should display the provided text', () => {
-    const { getByText } = render(<Pending title={'title'} onPress={jest.fn()} />)
+    const { getByText } = render(<Pending
+      title={'title'}
+      onPress={jest.fn()} />)
     expect(getByText('title')).not.toBeNull()
   })
 
   it('should invoke the provided callback when button is pressed', () => {
     const onPressMock = jest.fn()
     const { getByTestId } = render(
-      <Pending 
-      {...testID('pending-button')}
-      title={'title'} 
-      onPress={onPressMock} />
+      <Pending
+        {...testID('pending-button')}
+        title={'title'}
+        onPress={onPressMock} />
     )
 
     fireEvent.press(getByTestId('pending-button'))

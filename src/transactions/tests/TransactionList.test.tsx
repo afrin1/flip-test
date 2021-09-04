@@ -31,17 +31,18 @@ describe('Transaction List', () => {
     createdAt: "2021-08-26 11:49:49",
     completedAt: "2021-09-02 20:49:49",
   }]
+  const navigate = jest.fn()
   it('should match snapshot', () => {
-    expect(render(<TransactionList data={data} />)).toMatchSnapshot()
+    expect(render(<TransactionList data={data} navigation={{navigate}} />)).toMatchSnapshot()
   })
 
   it('should contain two Transaction Items when data has 2 items', () => {
-    const { queryAllByTestId } = render(<TransactionList data={data} />)
+    const { queryAllByTestId } = render(<TransactionList data={data} navigation={{navigate}} />)
     expect(queryAllByTestId('transaction-item')).toHaveLength(2)
   })
 
   it('should not contain two Transaction Items when data is empty', () => {
-    const { queryAllByTestId } = render(<TransactionList data={[]} />)
+    const { queryAllByTestId } = render(<TransactionList data={[]} navigation={{navigate}} />)
     expect(queryAllByTestId('transaction-item')).toHaveLength(0)
   })
 })

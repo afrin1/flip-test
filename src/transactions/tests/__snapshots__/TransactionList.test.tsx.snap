@@ -141,7 +141,7 @@ exports[`Transaction List should match snapshot 1`] = `
           <View
             accessible={true}
             collapsable={false}
-            focusable={false}
+            focusable={true}
             nativeID="animatedComponent"
             onClick={[Function]}
             onResponderGrant={[Function]}
@@ -164,7 +164,7 @@ exports[`Transaction List should match snapshot 1`] = `
                   "backgroundColor": "#00AF33",
                   "borderRadius": 10,
                   "color": "#FFFFFF",
-                  "fontSize": 14,
+                  "fontSize": 16,
                   "fontWeight": "bold",
                   "margin": 5,
                   "padding": 10,
@@ -259,7 +259,7 @@ exports[`Transaction List should match snapshot 1`] = `
           <View
             accessible={true}
             collapsable={false}
-            focusable={false}
+            focusable={true}
             nativeID="animatedComponent"
             onClick={[Function]}
             onResponderGrant={[Function]}
@@ -284,7 +284,7 @@ exports[`Transaction List should match snapshot 1`] = `
                   "borderRadius": 10,
                   "borderWidth": 2,
                   "color": "#000000",
-                  "fontSize": 14,
+                  "fontSize": 16,
                   "fontWeight": "bold",
                   "margin": 5,
                   "padding": 10,

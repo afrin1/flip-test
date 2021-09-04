@@ -7,6 +7,7 @@ import { Status, Transaction } from './types'
 
 interface TransactionItemProps {
   item: Transaction
+  navigation: any
 }
 
 const TransactionItem = (props: TransactionItemProps) => {
@@ -17,6 +18,11 @@ const TransactionItem = (props: TransactionItemProps) => {
     createdAt,
     status } = props.item
   const buttonText: string = status === Status.SUCCESS ? 'Berhasil' : 'Pengecekan'
+
+  const onButtonPressed = () => {
+    props.navigation.navigate('TransactionDetail', {...props.item} )
+  }
+  
   return (
     <View
       {...testID('transaction-item')}
@@ -31,8 +37,14 @@ const TransactionItem = (props: TransactionItemProps) => {
           <Text style={styles.otherInfo}>{`Rp.${amount} . ${createdAt}`}</Text>
         </View>
         {status === Status.SUCCESS
-          ? <SuccessButton title={buttonText} />
-          : <PendingButton title={buttonText} />}
+          ? <SuccessButton
+            {...testID('success-button')}
+            title={buttonText}
+            onPress={onButtonPressed} />
+          : <PendingButton
+            {...testID('pending-button')}
+            title={buttonText}
+            onPress={onButtonPressed} />}
       </View>
     </View>
   )

@@ -52,7 +52,7 @@ exports[`Search Bar should match snapshot 1`] = `
       style={
         Object {
           "color": "#FF6347",
-          "fontSize": 14,
+          "fontSize": 16,
           "fontWeight": "bold",
           "margin": 10,
           "textAlignVertical": "center",

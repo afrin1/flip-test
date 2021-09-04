@@ -11,17 +11,19 @@ describe('Success Button', () => {
   })
 
   it('should display the provided text', () => {
-    const { getByText } = render(<Success title={'title'} onPress={jest.fn()} />)
+    const { getByText } = render(<Success
+      title={'title'}
+      onPress={jest.fn()} />)
     expect(getByText('title')).not.toBeNull()
   })
 
   it('should invoke the provided callback when button is pressed', () => {
     const onPressMock = jest.fn()
     const { getByTestId } = render(
-      <Success 
-      {...testID('success-button')}
-      title={'title'} 
-      onPress={onPressMock} />
+      <Success
+        {...testID('success-button')}
+        title={'title'}
+        onPress={onPressMock} />
     )
 
     fireEvent.press(getByTestId('success-button'))

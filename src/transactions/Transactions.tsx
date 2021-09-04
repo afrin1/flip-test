@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { View } from 'react-native'
+import { SafeAreaView, View } from 'react-native'
 import { isMatchingSearchText } from '../utils/utils'
 import { sortA_Z, sortDateNewest, sortDateOldest, sortZ_A } from '../utils/sort'
 import { fetchTransactions } from './services'
@@ -7,8 +7,11 @@ import SearchBar from './SearchBar'
 import SortMenu, { sortOptions } from './SortMenu'
 import TransactionList from './TransactionList'
 import { Transaction } from './types'
+interface TransactionsProps {
+  navigation: any
+}
 
-const Transactions = () => {
+const Transactions = (props: TransactionsProps) => {
   const [searchText, onSearchTextChanged] = useState<string>('')
   const [data, setData] = useState<Transaction[]>([]);
   const [fullData, setFullData] = useState<Transaction[]>([])
@@ -70,7 +73,7 @@ const Transactions = () => {
   }
 
   return (
-    <View style={{ flex: 1 }}>
+    <SafeAreaView style={{ flex: 1, }}>
       {isSortMenuOpened ?
         <SortMenu
           setMenuClose={onSortMenuClose}
@@ -82,8 +85,9 @@ const Transactions = () => {
         text={searchText}
         onTextChanged={onSearch}
         onButtonPressed={onSortMenuOpen} />
-      <TransactionList data={data} />
-    </View>
+      <TransactionList data={data} navigation={props.navigation}/>
+    </SafeAreaView>
   )
 }
+
 export default Transactions

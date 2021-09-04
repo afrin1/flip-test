@@ -1,0 +1,276 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Transaction Detail should match snapshot 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "white",
+      "flex": 1,
+    }
+  }
+>
+  <View>
+    <View
+      style={
+        Object {
+          "paddingHorizontal": 20,
+          "paddingVertical": 30,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "fontSize": 20,
+            "fontWeight": "bold",
+          }
+        }
+      >
+        ID TRANSAKSI: #FT2366
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "borderColor": "#C5C5C5",
+          "borderWidth": 1,
+          "flexDirection": "row",
+          "justifyContent": "space-between",
+          "paddingHorizontal": 20,
+          "paddingVertical": 30,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "fontSize": 20,
+            "fontWeight": "bold",
+          }
+        }
+      >
+        DETAIL TRANSAKSI
+      </Text>
+      <View
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        nativeID="animatedComponent"
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "justifyContent": "center",
+            "opacity": 1,
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": "#FF6347",
+              "fontSize": 16,
+              "fontWeight": "bold",
+              "margin": 10,
+              "textAlignVertical": "center",
+            }
+          }
+        >
+          Tutup
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "paddingHorizontal": 20,
+          "paddingVertical": 20,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "fontSize": 25,
+            "fontWeight": "bold",
+          }
+        }
+      >
+        bni -&gt; bca
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "justifyContent": "space-between",
+          "marginVertical": 10,
+          "paddingLeft": 20,
+          "paddingRight": 60,
+        }
+      }
+    >
+      <View>
+        <Text
+          style={
+            Array [
+              Object {
+                "marginBottom": 10,
+              },
+              Object {
+                "fontSize": 18,
+                "fontWeight": "bold",
+              },
+            ]
+          }
+        >
+          Sammy-Jo Mccall
+        </Text>
+        <Text
+          style={
+            Object {
+              "fontSize": 18,
+            }
+          }
+        >
+          8379706095
+        </Text>
+      </View>
+      <View>
+        <Text
+          style={
+            Array [
+              Object {
+                "marginBottom": 10,
+              },
+              Object {
+                "fontSize": 18,
+                "fontWeight": "bold",
+              },
+            ]
+          }
+        >
+          NOMINAL
+        </Text>
+        <Text
+          style={
+            Object {
+              "fontSize": 18,
+            }
+          }
+        >
+          2629107
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "justifyContent": "space-between",
+          "marginVertical": 10,
+          "paddingLeft": 20,
+          "paddingRight": 60,
+        }
+      }
+    >
+      <View>
+        <Text
+          style={
+            Array [
+              Object {
+                "marginBottom": 10,
+              },
+              Object {
+                "fontSize": 18,
+                "fontWeight": "bold",
+              },
+            ]
+          }
+        >
+          BERITA TRANSFER
+        </Text>
+        <Text
+          style={
+            Object {
+              "fontSize": 18,
+            }
+          }
+        >
+          sample remark
+        </Text>
+      </View>
+      <View>
+        <Text
+          style={
+            Array [
+              Object {
+                "marginBottom": 10,
+              },
+              Object {
+                "fontSize": 18,
+                "fontWeight": "bold",
+              },
+            ]
+          }
+        >
+          KODE UNIK
+        </Text>
+        <Text
+          style={
+            Object {
+              "fontSize": 18,
+            }
+          }
+        >
+          726
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "justifyContent": "space-between",
+          "marginVertical": 10,
+          "paddingLeft": 20,
+          "paddingRight": 60,
+        }
+      }
+    >
+      <View>
+        <Text
+          style={
+            Array [
+              Object {
+                "marginBottom": 10,
+              },
+              Object {
+                "fontSize": 18,
+                "fontWeight": "bold",
+              },
+            ]
+          }
+        >
+          WAKTU DIBUAT
+        </Text>
+        <Text
+          style={
+            Object {
+              "fontSize": 18,
+            }
+          }
+        >
+          2021-09-02 20:49:49
+        </Text>
+      </View>
+    </View>
+  </View>
+</View>
+`;
