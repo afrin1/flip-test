@@ -20,9 +20,9 @@ const TransactionItem = (props: TransactionItemProps) => {
   const buttonText: string = status === Status.SUCCESS ? 'Berhasil' : 'Pengecekan'
 
   const onButtonPressed = () => {
-    props.navigation.navigate('TransactionDetail', {...props.item} )
+    props.navigation.navigate('TransactionDetail', { ...props.item })
   }
-  
+
   return (
     <View
       {...testID('transaction-item')}

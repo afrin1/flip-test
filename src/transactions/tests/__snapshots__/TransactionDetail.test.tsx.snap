@@ -8,6 +8,7 @@ exports[`Transaction Detail should match snapshot 1`] = `
       "flex": 1,
     }
   }
+  testID="transaction-detail-view"
 >
   <View>
     <View

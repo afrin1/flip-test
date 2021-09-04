@@ -2,6 +2,7 @@ import React from "react"
 import { StyleSheet, Text, View } from "react-native"
 import { PrimaryButton } from "../components/Button";
 import { colors, content, heading1, heading2, title } from "../theme";
+import testID from "../utils/testID";
 import { Transaction } from "./types";
 
 type RouteParam = {
@@ -13,6 +14,10 @@ interface TransactionDetailProps {
 }
 
 const TransactionDetail = (props: TransactionDetailProps) => {
+  const { params } = props.route
+  if (params === null || Object.keys(params).length === 0) {
+    return <Text>No data</Text>
+  }
   const { id,
     senderBank,
     beneficiaryBank,
@@ -21,9 +26,10 @@ const TransactionDetail = (props: TransactionDetailProps) => {
     amount,
     remark,
     uniqueCode,
-    createdAt } = props.route.params
+    createdAt } = params
+
   return (
-    <View style={styles.root}>
+    <View {...testID('transaction-detail-view')} style={styles.root}>
       <View >
         <View style={styles.idRow}>
           <Text style={heading2 as any}>{`ID TRANSAKSI: #${id}`}</Text>
@@ -40,27 +46,27 @@ const TransactionDetail = (props: TransactionDetailProps) => {
         </View>
         <View style={styles.detailContainer}>
           <View>
-            <Text style={[{marginBottom: 10}, title as any]}>{beneficiaryName}</Text>
+            <Text style={[{ marginBottom: 10 }, title as any]}>{beneficiaryName}</Text>
             <Text style={content as any}>{accountNumber}</Text>
           </View>
           <View>
-            <Text style={[{marginBottom: 10}, title as any]}>{'NOMINAL'}</Text>
+            <Text style={[{ marginBottom: 10 }, title as any]}>{'NOMINAL'}</Text>
             <Text style={content as any}>{amount}</Text>
           </View>
         </View>
         <View style={styles.detailContainer}>
           <View>
-            <Text style={[{marginBottom: 10}, title as any]}>{'BERITA TRANSFER'}</Text>
+            <Text style={[{ marginBottom: 10 }, title as any]}>{'BERITA TRANSFER'}</Text>
             <Text style={content as any}>{remark}</Text>
           </View>
           <View>
-            <Text style={[{marginBottom: 10}, title as any]}>{'KODE UNIK'}</Text>
+            <Text style={[{ marginBottom: 10 }, title as any]}>{'KODE UNIK'}</Text>
             <Text style={content as any}>{uniqueCode}</Text>
           </View>
         </View>
         <View style={styles.detailContainer}>
           <View>
-            <Text style={[{marginBottom: 10}, title as any]}>{'WAKTU DIBUAT'}</Text>
+            <Text style={[{ marginBottom: 10 }, title as any]}>{'WAKTU DIBUAT'}</Text>
             <Text style={content as any}>{createdAt}</Text>
           </View>
         </View>
