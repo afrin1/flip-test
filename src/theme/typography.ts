@@ -1,6 +1,6 @@
 export const buttonText = {
   textAlignVertical: 'center',
-  fontSize: 16,
+  fontSize: 15,
   fontWeight: 'bold'
 }
 
