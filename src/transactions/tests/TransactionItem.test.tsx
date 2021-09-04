@@ -66,6 +66,16 @@ describe('Transaction Item', () => {
     expect(getByTestId('pending-button')).not.toBeNull()
     expect(queryByTestId('success-button')).toBeNull()
   })
+  it('should navigate to transaction detail page when any item is clicked', () => {
+    const { getByTestId } = render(
+      <TransactionItem
+        item={item}
+        navigation={{ navigate }} />
+    )
+    fireEvent.press(getByTestId('transaction-item'))
+    expect(navigate).toBeCalledTimes(1)
+    expect(navigate).toBeCalledWith('TransactionDetail', item)
+  })
 
   it('should navigate to transaction detail page when success button is clicked', () => {
     const { getByTestId } = render(

@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Text, StyleSheet } from 'react-native'
+import { View, Text, StyleSheet, Pressable } from 'react-native'
 import { SuccessButton, PendingButton } from '../components/Button'
 import { colors } from '../theme/colors'
 import testID from '../utils/testID'
@@ -24,7 +24,8 @@ const TransactionItem = (props: TransactionItemProps) => {
   }
 
   return (
-    <View
+    <Pressable
+      onPress={onButtonPressed}
       {...testID('transaction-item')}
       style={styles.container}>
       <View {...testID('sidebar')} style={status === Status.SUCCESS
@@ -46,7 +47,7 @@ const TransactionItem = (props: TransactionItemProps) => {
             title={buttonText}
             onPress={onButtonPressed} />}
       </View>
-    </View>
+    </Pressable>
   )
 }
 

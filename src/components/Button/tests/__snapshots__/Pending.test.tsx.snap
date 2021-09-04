@@ -5,8 +5,9 @@ exports[`Pending Button should match snapshot 1`] = `
   accessible={true}
   collapsable={false}
   focusable={true}
-  nativeID="animatedComponent"
+  onBlur={[Function]}
   onClick={[Function]}
+  onFocus={[Function]}
   onResponderGrant={[Function]}
   onResponderMove={[Function]}
   onResponderRelease={[Function]}
@@ -16,9 +17,9 @@ exports[`Pending Button should match snapshot 1`] = `
   style={
     Object {
       "justifyContent": "center",
-      "opacity": 1,
     }
   }
+  title="title"
 >
   <Text
     style={

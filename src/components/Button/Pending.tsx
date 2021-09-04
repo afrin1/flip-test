@@ -1,19 +1,18 @@
 import React from "react";
-import { StyleSheet, Text, TouchableOpacity } from "react-native";
+import { Pressable, StyleSheet, Text } from "react-native";
 import { ButtonProps } from ".";
 import { colors } from "../../theme/colors";
 import { buttonText } from "../../theme/typography";
-import testID from "../../utils/testID";
 
 const PendingButton = (props: ButtonProps) => {
   const { title, onPress } = props
   return (
-    <TouchableOpacity
+    <Pressable
       {...props}
       onPress={onPress}
       style={styles.button}>
       <Text style={styles.buttonText}>{title}</Text>
-    </TouchableOpacity>
+    </Pressable>
   )
 }
 

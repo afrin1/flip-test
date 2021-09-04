@@ -2,6 +2,18 @@
 
 exports[`Transaction Item should match snapshot 1`] = `
 <View
+  accessible={true}
+  collapsable={false}
+  focusable={true}
+  onBlur={[Function]}
+  onClick={[Function]}
+  onFocus={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
   style={
     Object {
       "flexDirection": "row",
@@ -79,8 +91,9 @@ exports[`Transaction Item should match snapshot 1`] = `
       accessible={true}
       collapsable={false}
       focusable={true}
-      nativeID="animatedComponent"
+      onBlur={[Function]}
       onClick={[Function]}
+      onFocus={[Function]}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
       onResponderRelease={[Function]}
@@ -90,10 +103,10 @@ exports[`Transaction Item should match snapshot 1`] = `
       style={
         Object {
           "justifyContent": "center",
-          "opacity": 1,
         }
       }
       testID="success-button"
+      title="Berhasil"
     >
       <Text
         style={
